@@ -1,0 +1,21 @@
+{
+  "name": "iching",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "ramda": "^0.25.0",
+    "typescript": "^2.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "./gulp serve"
+  },
+  "author": "Alex Rivie",
+  "license": "ISC"
+}

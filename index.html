@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./main.css" />
+		<script type='text/javascript' src='./src/oracle.js'></script>
+	</head>
+
+	<body>
+		<div id="buttons">
+			<input type="button" name="cast" value="cast" onclick="hexlines.push(castLine(arr, hexlines));update(hexlines)"></input>
+			<input type="button" name="reset" value="reset" onclick="hexlines.length=0;clearSelector('#lines')"></input>
+		</div>
+		<div id="lines"></div>
+		<div id="hexagram"></div>
+		<div id="result"></div>
+
+		<script type="text/javascript">
+			/*var hex = hexagram;
+			
+			var el = document.getElementById("hexagram");
+			elChild = document.createElement('div');
+			elChild.innerHTML = hex.lines;
+			el.appendChild(elChild);  */
+
+		</script>
+	</body>
+</html>
