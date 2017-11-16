@@ -16,14 +16,45 @@ function castLine(arr, hexlines) {
 	return (arr[0])
 }
 
-function HexLines(lines) {
-	console.log(lines)
+// returns all lines in the array provided
+function DecimalLines(lines) {
 	return `<div>${lines}</div>`
 }
 
-function update(hexlines) {
-	if (hexlines.length > 6) return
-	document.querySelector('#lines').innerHTML = HexLines(hexlines);
+// returns a bunch of hex lines wrapped in divs
+function HexLines(lines) {
+	let retStr = ""
+	for (var i = lines.length-1;i>=0;i--) {
+		retStr += HexLine(lines[i])
+	}
+	console.log(retStr)
+	return retStr
+}
+// returns lines as css graphics wrapped up in
+// a nice div.
+function HexLine(line) {
+	return `<div class=${getLineClass(line)}></div>`
+}
+
+// takes a hexagram decimal integer and returns
+// a css class that draws a shape
+function getLineClass(line) {
+	switch (line) {
+		case 8:
+			return 'yin'
+		case 7: 
+			return 'yang'
+		case 6:
+			return 'yin'
+		case 9:
+			return 'yang'
+		}
+}
+
+
+function update() {
+	document.querySelector('#lines').innerHTML = DecimalLines(hexlines);
+	document.querySelector('#hexagram').innerHTML = HexLines(hexlines);
 }
 
 //TODO find a better way to clear this

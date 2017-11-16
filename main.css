@@ -1,5 +1,5 @@
-.yang-line {
-	width: 96px;
+.yang {
+	width: 150px;
 	height: 20px;
 	background: yellow;
 	border: 5px;
@@ -7,9 +7,26 @@
 	border-style: solid;
 }
 
-.yin-line {
+.yin {
+	width: 60px;
+	height: 20px;
+	background: yellow;
+	border: 5px;
+	border-color: white;
+	border-style: solid;
+	position:relative;
 
 }
+
+.yin:after {
+	content: "";
+	position: absolute;
+	left: 90px;
+	width: 60px;
+	height: 20px;
+	background: yellow;
+}
+
 
 body {
 	text-align: center;
