@@ -57,9 +57,4 @@ function update() {
 	document.querySelector('#hexagram').innerHTML = HexLines(hexlines);
 }
 
-//TODO find a better way to clear this
-function clearSelector(selector) {
-	document.querySelector(selector).innerHTML = `<div></div>`;
-}
-
 
