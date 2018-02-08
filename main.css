@@ -2,9 +2,7 @@
 	width: 150px;
 	height: 20px;
 	background: yellow;
-	border: 5px;
-	border-color: white;
-	border-style: solid;
+	margin: 5px;
 }
 
 .yin {
@@ -12,10 +10,11 @@
 	height: 20px;
 	background: yellow;
 	border: 5px;
-	border-color: white;
-	border-style: solid;
 	position:relative;
 	margin-left: -90px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+
 
 }
 
@@ -28,6 +27,14 @@
 	background: yellow;
 }
 
+/* this allows yin psuedo element to change colors */
+.yin.changing:after {
+	background: orange;
+}
+
+.changing {
+	background: orange;
+}
 
 body {
 	text-align: center;
@@ -37,6 +44,14 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+#hexagram.yin:after {
+	background: red;
+}
+
+#lines {
+	font-size: 24;
 }
 
 

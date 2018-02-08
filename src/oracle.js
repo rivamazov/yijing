@@ -16,12 +16,12 @@ function castLine(arr, hexlines) {
 	return (arr[0])
 }
 
-// returns all lines in the array provided
+// returns all decimal lines in the array provided
 function DecimalLines(lines) {
 	return `<div>${lines}</div>`
 }
 
-// returns a bunch of hex lines wrapped in divs
+// returns a bunch of css hex lines wrapped in divs
 function HexLines(lines) {
 	let retStr = ""
 	for (var i = lines.length-1;i>=0;i--) {
@@ -30,10 +30,10 @@ function HexLines(lines) {
 	console.log(retStr)
 	return retStr
 }
-// returns lines as css graphics wrapped up in
+// returns line number as css graphics wrapped up in
 // a nice div.
 function HexLine(line) {
-	return `<div class=${getLineClass(line)}></div>`
+	return `<div class="${getLineClass(line)}"></div>`
 }
 
 // takes a hexagram decimal integer and returns
@@ -41,20 +41,25 @@ function HexLine(line) {
 function getLineClass(line) {
 	switch (line) {
 		case 8:
-			return 'yin'
+			return "yin changing"
 		case 7: 
 			return 'yang'
 		case 6:
 			return 'yin'
 		case 9:
-			return 'yang'
+			return "yang changing"
 		}
+}
+
+function Result(lines) {
+	return "";
 }
 
 
 function update() {
 	document.querySelector('#lines').innerHTML = DecimalLines(hexlines);
 	document.querySelector('#hexagram').innerHTML = HexLines(hexlines);
+	document.querySelector('#result').innerHTML = Result(hexlines);
 }
 
 
