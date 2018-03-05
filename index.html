@@ -1,13 +1,15 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="./main.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script type='text/javascript' src='./src/oracle.js'></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	</head>
 
 	<body>
 		<div id="buttons">
-			<input type="button" name="cast" value="cast" onclick="hexlines.push(castLine(arr, hexlines));update()"></input>
-			<input type="button" name="reset" value="reset" onclick="hexlines.length=0;update()"></input>
+			<input class="btn" type="button" name="cast" value="cast" onclick="hexlines.push(castLine(arr, hexlines));update()"></input>
+			<input class="btn" type="button" name="reset" value="reset" onclick="hexlines.length=0;update()"></input>
 		</div>
 		<div id="lines"></div>
 		<div id="hexagram">

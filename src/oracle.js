@@ -41,11 +41,11 @@ function HexLine(line) {
 function getLineClass(line) {
 	switch (line) {
 		case 8:
-			return "yin changing"
+			return "yin"
 		case 7: 
 			return 'yang'
 		case 6:
-			return 'yin'
+			return 'yin changing'
 		case 9:
 			return "yang changing"
 		}
