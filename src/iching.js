@@ -24,7 +24,7 @@ var hexagram = {
 		  this.lines.push(this.arr[0]);
 	}, 
 	// creates primary and secondary hexagram arrays
-	// (if there are changing lines)hh
+	// (if there are changing lines)
 	dochanging() {
 		for (line in this.lines) {
 			if (this.lines[line] == 6) {
