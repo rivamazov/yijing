@@ -1,12 +1,11 @@
 "use strict";
 
 var arr = [6, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9];
-
 var hexlines = [];
 
 // shuffle array and return a number corresponding to 
 // an ancient I ching hexagram line
-function castLine(arr, hexlines) {
+function castLine(arr) {
 	var count = arr.length;
 	while (count > 0) {
 		var i = Math.floor(Math.random() * count);
@@ -23,7 +22,7 @@ function DecimalLines(lines) {
 	return "<div>" + lines + "</div>";
 }
 
-// returns a bunch of hex lines
+// returns hex lines separated by divs
 function Hexagram(lines) {
 	var retStr = "";
 	for (var i = lines.length - 1; i >= 0; i--) {
@@ -52,9 +51,11 @@ function getLineClass(line) {
 	}
 }
 
-function Result(lines) {
+function Result(primary) {
 	return "";
 }
+
+function lookupHexagram(hexlines) {}
 
 function update() {
 	document.querySelector('#lines').innerHTML = DecimalLines(hexlines);
@@ -62,7 +63,7 @@ function update() {
 	document.querySelector('#result').innerHTML = Result(hexlines);
 }
 
-var hexDict = {
+var hexdict = {
 	1: '777777',
 	2: '888888',
 	3: '788878',
