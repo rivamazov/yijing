@@ -2,7 +2,6 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="./main.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script type='text/javascript' src='./src/oracle.js'></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	</head>
 
@@ -10,11 +9,13 @@
 		<h2>I Ching</h2>
 
 		<div id="buttons" class="btn">
-			<input class="btn" type="button" name="cast" value="cast" onclick="hexlines.push(castLine(arr, hexlines));update()"></input>
-			<input class="btn" type="button" name="reset" value="reset" onclick="hexlines.length=0;update()"></input>
+			<input id="cast" class="btn" type="button" name="cast" value="cast"></input>
+			<input id="reset" class="btn" type="button" name="reset" value="reset"></input>
 		</div>
 		<div id="lines"></div>
 		<div id="hexagram"></div>
 		<div id="result"></div>
+
+		<script type='module' src='./dist/bundle.js'></script>
 	</body>
 </html>
