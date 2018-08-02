@@ -12,7 +12,7 @@ gulp.task('serve', function() {
     }
   });
 
-  gulp.watch(['*.html', '*.css', './src/*.js', '.dist/*.js'], {cwd: './'}, reload);
+  gulp.watch(['*.html', '*.css', './src/*.js', './dist/*.js'], {cwd: './'}, reload);
 });
 
 
