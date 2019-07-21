@@ -13,12 +13,16 @@ export function update(hexLines) {
 }
 
 window.onload = function() {
-	update(hex.getLines());
-	document.getElementById('cast').onClick = function () {
-		console.log('u clicked cast')
-	}
 
-	document.getElementById('reset').onClick = function () {
-		console.log('u clicked reset')
+	update(hex.getLines());
+	var el = document.getElementById('cast');
+	console.log('motha fucka');
+	el.onclick = function () {
+		console.log('hello');
+		alert('hey');
 	}
+	console.log(el);
+	// el.addEventListener('click', alert('hey'))
 }
+
+// document.getElementById('reset').onclick = alert('hey')

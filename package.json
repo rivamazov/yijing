@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.html",
   "scripts": {
+    "bundle": "./node_modules/webpack/bin/webpack.js",
+    "serve": "./node_modules/gulp/bin/gulp.js serve",
     "build": "babel src -d lib"
   },
   "repository": {
