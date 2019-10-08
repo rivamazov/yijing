@@ -1,5 +1,8 @@
-This is an older project so you must **use node 8** then:
+# Yi Jing Calculator
 
-- `npm install` 
-- `npm run-script bundle`
-- `gulp serve`
+To view the application:
+
+`npm install`
+`npm run build`
+
+Then open `dist/index.html`
