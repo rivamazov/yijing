@@ -1,12 +1,13 @@
-import { createHexagram } from './hexagram.js'
-import { draw } from './draw.js'
+import createHexagram from './hexagram.js'
+import draw from './draw.js'
+import css from './main.css'
 
 let hex = createHexagram([6,7,8,9,9,9]);
-let css = draw();
+let drawcss = draw();
 
 export function update(hexLines) {
 	document.querySelector('#lines').innerHTML = hexLines;
-	document.querySelector('#hexagram').innerHTML = css.hexagram(hex.getLines());
+	document.querySelector('#hexagram').innerHTML = drawcss.hexagram(hex.getLines());
 	document.querySelector('#result').innerHTML = '';
 }
 

@@ -45,5 +45,4 @@ function createHexagram(hexLines = []) {
 	}
 }
 
-export default createHexagram()
-
+export default createHexagram

@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "bundle": "./node_modules/webpack/bin/webpack.js",
-    "serve": "./node_modules/gulp/bin/gulp.js serve",
-    "build": "babel src -d lib"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --watch --mode development"
   },
   "repository": {
     "type": "git",
@@ -20,16 +20,21 @@
   "homepage": "https://github.com/rivamazov/yijing#readme",
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.51",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
     "babel-cli": "^6.26.0",
-    "babel-loader": "^7.1.4",
+    "babel-loader": "^8.0.0-beta.6",
     "babel-plugin-add-module-exports": "^0.3.0-pre.1",
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.24.4",
+    "css-loader": "^3.2.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
     "gulp-util": "^3.0.8",
-    "webpack": "^4.12.0",
-    "webpack-cli": "^3.0.8"
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
   }
 }

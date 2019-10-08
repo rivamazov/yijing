@@ -39,4 +39,4 @@ function draw() {
 
 }
 
-export default draw()
+export default draw
