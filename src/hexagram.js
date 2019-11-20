@@ -1,6 +1,7 @@
 'use strict'
 
-function createHexagram(hexLines = []) {
+// Hexagram Data Structure
+function Hex(hexLines = []) {
 	let linesArr = [6, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9]
 	let lines = hexLines
 	let primaryLines = []
@@ -41,8 +42,8 @@ function createHexagram(hexLines = []) {
 		getLines,
 		setLines,
 		addLine,
-		createHexagram,
+		Hex,
 	}
 }
 
-export default createHexagram
+export default Hex

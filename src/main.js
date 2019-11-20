@@ -1,23 +1,41 @@
-import createHexagram from './hexagram.js'
-import draw from './draw.js'
+import Hex from './hexagram.js'
+import Draw from './draw.js'
 import css from './main.css'
 
-let hex = createHexagram([6,7,8,9,9,9]);
-let drawcss = draw();
+var hex = Hex()
+var draw = Draw()
 
-export function update(hexLines) {
-	document.querySelector('#lines').innerHTML = hexLines;
-	document.querySelector('#hexagram').innerHTML = drawcss.hexagram(hex.getLines());
+var hexarr = []
+
+// takes in an array called hex that the Hex library will operate on
+export function update(arr) {
+	document.querySelector('#lines').innerHTML = 1
+	document.querySelector('#hexagram').innerHTML = draw.linesAsCss(arr);
 	document.querySelector('#result').innerHTML = '';
 }
 
-window.onload = function() {
+window.addEventListener('load',
+	function() {
+		let cast = document.getElementById('cast');
+		let hexagram = document.getElementById('hexagram');
+		let result = document.getElementById('result');
 
-	update(hex.getLines());
-	var el = document.getElementById('cast');
-	el.onclick = function () {
-		console.log('hello');
-		alert('hey');
+		cast.onclick = function() {
+			
+			hexarr = hex.addLine(hexarr)
+			update(hexarr)
+		}
+	})
+
+window.addEventListener('load',
+	function() {
+
 	}
-	console.log(el);
-}
+)
+
+//var el = document.getElementById('cast');
+//el.onclick = function () {
+//	console.log('clicked cast')
+//}
+//console.log(el);
+

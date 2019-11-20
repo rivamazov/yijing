@@ -1,19 +1,19 @@
-function draw() {
+function Draw() {
 	function decimalLines(lines) {
 		return `<div>${lines}</div>`
 	}
 
 	// returns css representation of hex lines separated by divs
-	function hexagram(hexLines) {
+	function linesAsCss(hexLines) {
 		let retStr = ""
 		for (var i = hexLines.length-1;i>=0;i--) {
-			retStr += hexLineAsCSS(hexLines[i])
+			retStr += hexLineAsCss(hexLines[i])
 		}
 		console.log(retStr)
 		return retStr
 	}
 	// returns line number as css
-	function hexLineAsCSS(line) {
+	function hexLineAsCss(line) {
 		return `<div class="${getLineClass(line)}"></div>`
 	}
 
@@ -33,10 +33,9 @@ function draw() {
 	}
 
 	return {
-		draw,
-		hexagram
+		linesAsCss
 	}
 
 }
 
-export default draw
+export default Draw
