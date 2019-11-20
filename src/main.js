@@ -9,7 +9,7 @@ var hexarr = []
 
 // takes in an array called hex that the Hex library will operate on
 export function update(arr) {
-	document.querySelector('#lines').innerHTML = 1
+	document.querySelector('#lines').innerHTML = draw.linesAsDecimal(arr)
 	document.querySelector('#hexagram').innerHTML = draw.linesAsCss(arr);
 	document.querySelector('#result').innerHTML = '';
 }
@@ -17,14 +17,20 @@ export function update(arr) {
 window.addEventListener('load',
 	function() {
 		let cast = document.getElementById('cast');
+		let reset = document.getElementById('reset');
 		let hexagram = document.getElementById('hexagram');
 		let result = document.getElementById('result');
 
 		cast.onclick = function() {
-			
 			hexarr = hex.addLine(hexarr)
 			update(hexarr)
 		}
+
+		reset.onclick = function() {
+			hexarr = []
+			update(hexarr)
+		}
+
 	})
 
 window.addEventListener('load',
@@ -32,10 +38,3 @@ window.addEventListener('load',
 
 	}
 )
-
-//var el = document.getElementById('cast');
-//el.onclick = function () {
-//	console.log('clicked cast')
-//}
-//console.log(el);
-

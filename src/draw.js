@@ -1,25 +1,24 @@
 function Draw() {
-	function decimalLines(lines) {
-		return `<div>${lines}</div>`
-	}
+
+	const linesAsDecimal = (hexArray) => `<div>${hexArray}</div>`
 
 	// returns css representation of hex lines separated by divs
-	function linesAsCss(hexLines) {
+	const linesAsCss = (hexArray) => {
 		let retStr = ""
-		for (var i = hexLines.length-1;i>=0;i--) {
-			retStr += hexLineAsCss(hexLines[i])
+		for (var i = hexArray.length-1;i>=0;i--) {
+			retStr += hexLineAsCss(hexArray[i])
 		}
-		console.log(retStr)
 		return retStr
 	}
+
 	// returns line number as css
-	function hexLineAsCss(line) {
+	const hexLineAsCss = (line) => {
 		return `<div class="${getLineClass(line)}"></div>`
 	}
 
 	// takes a hexagram decimal integer and returns
 	// a css class that draws a shape
-	function getLineClass(line) {
+	const getLineClass = (line) => {
 		switch (line) {
 			case 8:
 				return "yin"
@@ -33,6 +32,7 @@ function Draw() {
 	}
 
 	return {
+		linesAsDecimal,
 		linesAsCss
 	}
 
