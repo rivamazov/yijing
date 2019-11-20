@@ -8,10 +8,18 @@ var draw = Draw()
 var hexarr = []
 
 // takes in an array called hex that the Hex library will operate on
-export function update(arr) {
-	document.querySelector('#lines').innerHTML = draw.linesAsDecimal(arr)
+export function update(arr, reset=false) {
+	// document.querySelector('#lines').innerHTML = draw.linesAsDecimal(arr)
 	document.querySelector('#hexagram').innerHTML = draw.linesAsCss(arr);
-	document.querySelector('#result').innerHTML = '';
+
+	if (hex.isComplete(arr) || reset) {
+		console.log(reset)
+		document.querySelector('#result').innerHTML = hex.lookup(hex.primary(arr));
+		if (hexarr = hex.secondary(hexarr) || reset) {
+			document.querySelector('#primary').innerHTML = draw.linesAsCss(hex.primary(arr));
+			document.querySelector('#secondary').innerHTML = draw.linesAsCss(hex.secondary(arr));
+		}
+	}
 }
 
 window.addEventListener('load',
@@ -28,13 +36,6 @@ window.addEventListener('load',
 
 		reset.onclick = function() {
 			hexarr = []
-			update(hexarr)
+			update(hexarr, true)
 		}
-
 	})
-
-window.addEventListener('load',
-	function() {
-
-	}
-)
