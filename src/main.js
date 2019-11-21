@@ -9,15 +9,11 @@ var hexarr = []
 
 // takes in an array called hex that the Hex library will operate on
 export function update(arr, reset=false) {
-	// document.querySelector('#lines').innerHTML = draw.linesAsDecimal(arr)
 	document.querySelector('#hexagram').innerHTML = draw.linesAsCss(arr);
 
 	if (hex.isComplete(arr) || reset==true) {
 		document.querySelector('#result').innerHTML = hex.lookup(hex.primary(arr));
 		if (hexarr.toString() !== hex.secondary(hexarr).toString() || reset==true) {
-			console.log('conditional is ' + (hexarr.toString() == hex.secondary(hexarr).toString()))
-			console.log('hexarrsec' + hex.secondary(hexarr))
-			console.log(reset)
 			document.querySelector('#primary').innerHTML = draw.linesAsCss(hex.primary(arr));
 			document.querySelector('#secondary').innerHTML = draw.linesAsCss(hex.secondary(arr));
 			document.querySelector('#primary-result').innerHTML = hex.lookup(hex.primary(arr))

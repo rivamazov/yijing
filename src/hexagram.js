@@ -2,9 +2,6 @@
 
 function Hex(hexLines = []) {
 	let linesArr = [6, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9]
-	let primaryLines = []
-	let secondaryLines = []
-	let name = ""
 
 	const addLine = (hexArray) => {
 		if (isComplete(hexArray)) {
