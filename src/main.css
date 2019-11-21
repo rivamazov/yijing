@@ -49,7 +49,7 @@ body {
 	flex-basis: 150px;
 }
 
-#hexrow {
+.hexrow {
 	display: flex;
 	align-items: center;
 	flex-basis: 300px;

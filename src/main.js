@@ -18,6 +18,8 @@ export function update(arr, reset=false) {
 		if (hexarr = hex.secondary(hexarr) || reset) {
 			document.querySelector('#primary').innerHTML = draw.linesAsCss(hex.primary(arr));
 			document.querySelector('#secondary').innerHTML = draw.linesAsCss(hex.secondary(arr));
+			document.querySelector('#primary-result').innerHTML = hex.lookup(hex.primary(arr))
+			document.querySelector('#secondary-result').innerHTML = hex.lookup(hex.secondary(arr))
 		}
 	}
 }
