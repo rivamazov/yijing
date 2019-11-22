@@ -1,28 +1,36 @@
 <html>
 	<head>
+		<title>yijing (already) caster</title>
 		<link rel="stylesheet" type="text/css" href="./main.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	</head>
 
 	<body>
-		<h2 id="title">I Ching</h2>
-
-		<div id="buttons" class="btn">
-			<input id="cast" class="btn btn-outline-dark btn-lg" type="button" name="cast" value="cast"></input>
-			<input id="reset" class="btn btn-outline-dark btn-lg" type="button" name="reset" value="reset"></input>
+		<div id="topbar">
+			<p class="title">易經 alreadyapp</p>
+			<div id="buttons">
+				<button id="reset" type="button" class="btn-dark">Reset</button>
+				<button id="help" type="button" class="btn-dark">About</button>
+			</div>
 		</div>
-		<div id="lines"></div>
-		<div id="hexagram"></div>
-		<div id="result" class="result"></div>
-		<div class="hexrow">
-			<div id="primary" class="hexcolumn"></div>
-			<div id="secondary" class="hexcolumn"></div>
+			<h2>I Ching</h2>
+		<div id="visuals">
+			<div id="hexagram">
+				<p>Touch below to cast six lines.</p>
+			</div>
+			<div id="result" class="result"></div>
+			<div class="hexrow">
+				<div id="primary" class="hexcolumn"></div>
+				<div id="secondary" class="hexcolumn"></div>
+			</div>
+			<div class="hexrow">
+				<div id="primary-result" class="hexcolumn result"></div>
+				<div id="secondary-result" class="hexcolumn result"></div>
+			</div>
 		</div>
-		<div class="hexrow">
-			<div id="primary-result" class="hexcolumn result"></div>
-			<div id="secondary-result" class="hexcolumn result"></div>
-		</div>
+		<!-- yin yang symbol made by darthkitty http://jsfiddle.net/DarthKitty/bP5hr/ -->
+		<div id="yinYang"><div><div></div><div><div></div></div><div><div></div></div></div>
 		<script type="module" src="./dist/bundle.js"></script>
 	</body>
 </html>

@@ -1,29 +1,41 @@
-#title {
-	background-color: black;
-	color: white;
-	margin: 0px;
-	padding-bottom: 10px;
-	padding-top:10px;
+#topbar {
+	display: flex;
+	justify-content: space-between;
+	background: #1b1b1b;
+}
+
+.title {
+	display: flex;
+	font-size: 20;
+	margin: 0;
+	justify-content: space-evenly;
+}
+
+#buttons {
+	display: flex;
+	margin: 0;
+}
+
+.result {
+	font-size: 30;
 }
 
 .yang {
 	width: 150px;
 	height: 20px;
-	background: #ffff66;
+	background: #bde021;
 	margin: 5px;
 }
 
 .yin {
 	width: 60px;
 	height: 20px;
-	background: #ffff66;
+	background:  #bde021;
 	border: 5px;
 	position:relative;
 	margin-left: -90px;
 	margin-top: 5px;
 	margin-bottom: 5px;
-
-
 }
 
 .yin:after {
@@ -32,7 +44,7 @@
 	left: 90px;
 	width: 60px;
 	height: 20px;
-	background: #ffff66;
+	background:  #bde021;
 }
 
 /* this allows yin psuedo element to change colors */
@@ -45,7 +57,21 @@
 }
 
 body {
+	background: black;
 	text-align: center;
+	color: white;
+}
+
+#visuals {
+	background: #141414;
+	padding: 20px;
+	margin:auto;
+	min-height: 270px;
+	/*height: 450px;*/
+	width: 340px;
+	margin-bottom: 10px;
+	border-style: dotted;
+	border-color: gold;
 }
 
 #hexagram {
@@ -73,45 +99,61 @@ body {
 	font-size: 24;
 }
 
-.result {
-	font-size: 30;
+
+
+/*Try increasing or decreasing both the height and width of #yinYang!*/
+
+
+#yinYang{
+	margin: auto;
+    height: 250px;
+    position: relative;
+    width: 250px;
 }
 
-
-
-
-/* https://css-tricks.com/examples/ShapesOfCSS/ */
-#yin-yang {
-	width: 96px;
-	height: 48px;
-	background: #eee;
-	border-color: red;
-	border-style: solid;
-	border-width: 2px 2px 50px 2px;
-	border-radius: 100%;
-	position: relative;
+#yinYang div{
+    background: #FFF;
+    border-radius: 50%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
-#yin-yang:before {
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 0;
-	background: #eee;
-	border: 18px solid red;
-	border-radius: 100%;
-	width: 12px;
-	height: 12px;
+#yinYang div div:first-child{
+    background: #000;
+    border-radius: 0 999px 999px 0;
+    left: 50%;
+    position: absolute;
 }
 
-#yin-yang:after {
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	background: red;
-	border: 18px solid #eee;
-	border-radius:100%;
-	width: 12px;
-	height: 12px;
+#yinYang div div:nth-child(2){
+    bottom: 50%;
+    left: 25%;
+    right: 25%;
+}
+
+#yinYang div div:last-child{
+    background: #000;
+    left: 25%;
+    right: 25%;
+    top: 50%;
+}
+
+#yinYang div div:nth-child(2) div{
+    border-radius: 50%;
+    bottom: 35%;
+    left: 35%;
+    right: 35%;
+    top: 35%;
+}
+
+#yinYang div div:last-child div{
+    background: #FFF;
+    border-radius: 50%;
+    bottom: 35%;
+    left: 35%;
+    right: 35%;
+    top: 35%;
 }
