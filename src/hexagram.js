@@ -5,7 +5,6 @@ function Hex(hexLines = []) {
 
 	const addLine = (hexArray) => {
 		if (isComplete(hexArray)) {
-			console.log('hex is already full')
 			return hexArray
 		}
 		return [...hexArray, randomLine()];
@@ -46,15 +45,12 @@ function Hex(hexLines = []) {
 	
 	const lookup = (hexArray) => {
 		let strArray = hexArray.toString().replace(/,/g,'')
-		console.log(hexArray)
-		console.log(strArray)
 		if (hexArray.length == 0) return ''
 		else  {
 			for (let hex in HEXAGRAMS) {
 				if (HEXAGRAMS[hex] == strArray) {
 					return hex
 				}
-				// why does any code here execute
 			}
 		}
 }

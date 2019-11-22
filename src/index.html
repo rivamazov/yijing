@@ -6,7 +6,7 @@
 	</head>
 
 	<body>
-		<h2>I Ching</h2>
+		<h2 id="title">I Ching</h2>
 
 		<div id="buttons" class="btn">
 			<input id="cast" class="btn" type="button" name="cast" value="cast"></input>
@@ -14,14 +14,14 @@
 		</div>
 		<div id="lines"></div>
 		<div id="hexagram"></div>
-		<div id="result"></div>
+		<div id="result" class="result"></div>
 		<div class="hexrow">
 			<div id="primary" class="hexcolumn"></div>
 			<div id="secondary" class="hexcolumn"></div>
 		</div>
 		<div class="hexrow">
-			<div id="primary-result" class="hexcolumn"></div>
-			<div id="secondary-result" class="hexcolumn"></div>
+			<div id="primary-result" class="hexcolumn result"></div>
+			<div id="secondary-result" class="hexcolumn result"></div>
 		</div>
 		<script type="module" src="./dist/bundle.js"></script>
 	</body>

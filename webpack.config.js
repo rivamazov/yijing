@@ -26,6 +26,9 @@ module.exports = {
 			}
     ]
   },
+	devServer: {
+		contentBase: ['src'],
+	},
 	plugins: [
 		new HtmlWebPackPlugin({
 			template: "src/index.html",

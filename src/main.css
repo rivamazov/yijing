@@ -1,4 +1,10 @@
-
+#title {
+	background-color: black;
+	color: white;
+	margin: 0px;
+	padding-bottom: 10px;
+	padding-top:10px;
+}
 
 .yang {
 	width: 150px;
@@ -67,7 +73,7 @@ body {
 	font-size: 24;
 }
 
-#result {
+.result {
 	font-size: 30;
 }
 
