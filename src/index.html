@@ -8,18 +8,26 @@
 
 	<body>
 		<div id="topbar">
-			<p class="title">易經 alreadyapp</p>
+			<p class="title">易經 (already)</p>
 			<div id="buttons">
 				<button id="reset" type="button" class="btn-dark">Reset</button>
-				<button id="help" type="button" class="btn-dark">About</button>
+				<button id="about" type="button" class="btn-dark">About</button>
+				<button id="help" type="button" class="btn-dark">&nbsp;?&nbsp;</button>
 			</div>
 		</div>
-			<h2>I Ching</h2>
-		<div id="visuals">
-			<div id="hexagram">
-				<p>Touch below to cast six lines.</p>
+		<h2>I Ching</h2>
+		
+		<div class="modal">
+			<div class="modal-content">
+				<span class="close-button">&times;</span>
+				<h1>hello I am a modal</h1>
 			</div>
+		</div>
+		<div id="mainvisual">
+			<div id="hexagram">Click here to cast lines.</div>
 			<div id="result" class="result"></div>
+		</div>
+		<div class="visuals" id=changingvisual>
 			<div class="hexrow">
 				<div id="primary" class="hexcolumn"></div>
 				<div id="secondary" class="hexcolumn"></div>
