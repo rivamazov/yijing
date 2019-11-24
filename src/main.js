@@ -6,60 +6,60 @@ var hex = Hex()
 var draw = Draw()
 
 var hexarr = []
+var result
+var secondary
+var link
+var link2
 
 // takes in an integer array of hexagram codes that the Hex library will operate on
 export function update(arr, reset=false) {
 	document.querySelector('#hexagram').innerHTML = draw.linesAsCss(arr);
 	if (hex.isComplete(arr) || reset==true) {
-		document.querySelector('#result').innerHTML = hex.lookup(hex.primary(arr))
-		if (hexarr.toString() !== hex.secondary(hexarr).toString() || reset==true) {
-			document.querySelector('#primary').innerHTML = draw.linesAsCss(hex.primary(arr))
+		document.getElementById('reset').classList.add('fade')
+		result = hex.lookup(hex.primary(arr))
+		document.querySelector('#result').innerHTML = result
+		link = 'http://www.jamesdekorne.com/GBCh/hex' + result + '.htm'
+		if (result !== hex.lookup(hex.secondary(arr))) {
+			document.getElementById('secondary').classList.add('fade')
+			secondary = hex.lookup(hex.secondary(arr))
+			document.querySelector('#result').innerHTML = result + " → " + secondary
 			document.querySelector('#secondary').innerHTML = draw.linesAsCss(hex.secondary(arr))
-			document.querySelector('#primary-result').innerHTML = hex.lookup(hex.primary(arr))
-			document.querySelector('#secondary-result').innerHTML = hex.lookup(hex.secondary(arr))
-			document.querySelector('#changingvisual').style.visibility = 'visible'
-			if (reset==true) {
-				document.querySelector('#changingvisual').style.visibility = 'hidden'
-			}
-
+			link2 = 'http://www.jamesdekorne.com/GBCh/hex' + secondary + '.htm'
+		}
+		if (reset==true) {
+			document.getElementById('secondary').classList.remove('fade')
+			document.getElementById('reset').classList.remove('fade')
+			document.getElementById('hexagram').classList.remove('fade')
+			hexarr = []
+			document.getElementById('result').innerHTML = ''
 		}
 	}
 }
 
 window.addEventListener('load',
 	function() {
-		let cast = document.getElementById('cast')
+		let cast = document.querySelector('.cast')
 		let reset = document.getElementById('reset')
 		let hexagram = document.getElementById('hexagram')
-		let help = document.getElementById('help')
-		let mainvisual = document.getElementById('mainvisual')
+		let secondary = document.getElementById('secondary')
 
-		mainvisual.onclick = function() {
-			if (hex.isComplete(hexarr)) {
-				let alertmsg = document.createElement('div');
-				alertmsg.className = "alert alert-warning"
-				alertmsg.innerHTML = `<button type="button" class="close" data-dismiss="alert"`
-										+ `aria-label="Close"><span aria-hidden="true">&times;</span></button>`
-				//document.getElementById('alert').insertAdjacentElement('beforebegin', alertmsg)
-				setTimeout(() => alertmsg.remove(), 1000);
-			}
+		cast.onclick = function() {
 			hexarr = hex.addLine(hexarr)
+			document.getElementById('hexagram').classList.add('fade')
 			update(hexarr)
 		}
 
 		reset.onclick = function() {
-			hexarr = []
 			update(hexarr, true)
 		}
 
 		hexagram.onclick = function() {
+			window.open(link)
+		}
+
+		secondary.onclick = function() {
+			window.open(link2)
 		}
 	}
 )
 
-document.addEventListener( 'dblclick', function(event) {  
-    //alert("Double-click disabled!");  
-    event.preventDefault();  
-    event.stopPropagation(); 
-  },  true //capturing phase!!
-);

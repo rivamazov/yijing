@@ -1,52 +1,98 @@
-#topbar {
+body {
+	margin: 0;
+}
+
+.dark-mode {
+	background: black;
 	color: white;
-	display: flex;
-	justify-content: space-between;
-	background: #1b1b1b;
 }
 
-.title {
+.wrapper {
 	display: flex;
-	font-size: 20;
-	margin: 0;
-	justify-content: space-evenly;
+    flex-direction: column;    
+    justify-content: flex-start;
+	align-items: center;
+	height: 100%;
 }
 
-h2 {
-	margin-top:5px;
-}
-#buttons {
-	display: flex;
-	margin: 0;
+.logo {
+	min-height: 50px;
+	margin: 10px;
+	font-size:2em;
 }
 
-.result {
-	font-size: 30;
+#result {
+	min-height:22px;
+	text-align: center;
+}
+
+#reset {
+	display: flex;
+	background: 0;
+	color: white;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 10px;
+	opacity: 0;
+	transition: opacity 2s;
+}
+
+#reset.fade {
+	opacity: 1;
+}
+
+.hex-viewer {
+	display: flex;
+	min-height: 155px;
+	width: 200px;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+#hexagram {
+	opacity: 0;
+	transition: opacity 2s;
+}
+
+#hexagram.fade {
+	opacity: 1;
+}
+
+#secondary {
+	opacity: 0;
+	transition: opacity 2s;
+}
+
+#secondary.fade {
+	opacity: 1;
+}
+
+.cast {
+	height: 100%;
+	width: 100%;
 }
 
 .yang {
-	width: 150px;
+	width: 200px;
 	height: 20px;
 	background: #e7e42a;
-	margin: 5px;
+	margin: 5 0 5 0;
 }
 
 .yin {
-	width: 60px;
+	width: 85px;
 	height: 20px;
 	background:  #e7e42a;
 	border: 5px;
 	position:relative;
-	margin-left: -90px;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	margin: 5 0 5 0;
 }
 
 .yin:after {
 	content: "";
 	position: absolute;
-	left: 90px;
-	width: 60px;
+	left: 115px;
+	width: 85px;
 	height: 20px;
 	background:  #e7e42a;
 }
@@ -59,116 +105,6 @@ h2 {
 .changing {
 	background: orange;
 }
-
-body {
-	background: white;
-	text-align: center;
-	color: black;
-}
-
-#changingvisual {
-	visibility: hidden;
-	border-color:black;
-}
-
-.visuals {
-	padding-top: 20px;
-	margin:auto;
-	min-height: 275px;
-	/*height: 450px;*/
-	max-width: 340px;
-	margin-bottom: 10px;
-}
-
-#mainvisual {
-	display: flex;
-	margin: auto;
-	width: 300px;
-	height: 240px;
-	border-color: #dadada;
-	border-style: dotted;
-	align-items: center;
-	justify-content: space-between;
-	flex-direction: column;
-}
-
-#hexagram {
-	display: flex;
-	padding-top: 10px;
-	flex-direction: column;
-	align-items: center;
-	flex-basis: 190px;
-	-ms-flex-item-align: bottom;
-}
-
-.hexrow {
-	display: flex;
-	align-items: center;
-	flex-basis: 300px;
-	justify-content: center;
-}
-
-.hexcolumn {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	flex-basis: 150px;
-}
-
-#lines {
-	font-size: 24;
-}
-
-/* MODAL FROM sabe.io tutorial */
-
-
-.modal {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(1.1);
-    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-}
-
-/* puts it in the center of the screen */
-.modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 1rem 1.5rem;
-    width: 24rem;
-    border-radius: 0.5rem;
-}
-.close-button {
-    float: right;
-    width: 1.5rem;
-    line-height: 1.5rem;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 0.25rem;
-    background-color: lightgray;
-}
-.close-button:hover {
-    background-color: darkgray;
-}
-.show-modal {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1.0);
-    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-}
-	
-
-
-
-/*Try increasing or decreasing both the height and width of #yinYang!*/
 
 
 #yinYang{

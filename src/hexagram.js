@@ -53,7 +53,8 @@ function Hex(hexLines = []) {
 				}
 			}
 		}
-}
+	}
+
 
 const HEXAGRAMS = {
 	1: '777777', 

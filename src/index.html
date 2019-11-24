@@ -2,43 +2,26 @@
 	<head>
 		<title>yijing (already) caster</title>
 		<link rel="stylesheet" type="text/css" href="./main.css" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
-
 	<body>
-		<div id="topbar">
-			<p class="title">易經 (already)</p>
-			<div id="buttons">
-				<button id="reset" type="button" class="btn-dark">Reset</button>
-				<button id="about" type="button" class="btn-dark">About</button>
-				<button id="help" type="button" class="btn-dark">&nbsp;?&nbsp;</button>
+		<div class="wrapper dark-mode">
+			<span class="logo">易經</span>
+			<div style="border: 1px solid white; padding:5 10 5 10px;">
+				<div class="hex-viewer">
+					<div id="secondary"></div>
+				</div>
+				<div id="result"></div>
+				<div class="hex-viewer">
+					<div id="hexagram"></div>
+				</div>
 			</div>
-		</div>
-		<h2>I Ching</h2>
-		
-		<div class="modal">
-			<div class="modal-content">
-				<span class="close-button">&times;</span>
-				<h1>hello I am a modal</h1>
-			</div>
-		</div>
-		<div id="mainvisual">
-			<div id="hexagram">Click here to cast lines.</div>
-			<div id="result" class="result"></div>
-		</div>
-		<div class="visuals" id=changingvisual>
-			<div class="hexrow">
-				<div id="primary" class="hexcolumn"></div>
-				<div id="secondary" class="hexcolumn"></div>
-			</div>
-			<div class="hexrow">
-				<div id="primary-result" class="hexcolumn result"></div>
-				<div id="secondary-result" class="hexcolumn result"></div>
-			</div>
+        <p>Click below to consult the Oracle.</p>
+			<div class="cast"></div>
+			<div id='reset'>reset</div>
 		</div>
 		<!-- yin yang symbol made by darthkitty http://jsfiddle.net/DarthKitty/bP5hr/ -->
-		<div id="yinYang"><div><div></div><div><div></div></div><div><div></div></div></div>
+		<!-- <div id="yinYang"><div><div></div><div><div></div></div><div><div></div></div></div> -->
 		<script type="module" src="./dist/bundle.js"></script>
 	</body>
 </html>
