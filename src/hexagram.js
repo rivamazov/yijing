@@ -1,6 +1,8 @@
 'use strict'
 
 function Hex(hexLines = []) {
+	// array to allow probabilities from the yarrow stalk method.
+	// 1/16 3/16 5/16 7/16 for 6, 9, 7, 8 respectively.
 	let linesArr = [6, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9]
 
 	const addLine = (hexArray) => {
