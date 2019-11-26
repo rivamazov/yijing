@@ -8,18 +8,14 @@
 	<body>
 		<div class="wrapper dark-mode">
 			<span class="logo">易經</span>
-			<div style="border: 1px solid white; padding:5 10 5 10px;">
-				<div class="hex-viewer">
-					<div id="secondary"></div>
-				</div>
-				<div id="result"></div>
-				<div class="hex-viewer">
-					<div id="hexagram"></div>
-				</div>
+			<div id="hex-container">
+				<div id="primary" class="hexagram"></div>
+				<div id="secondary" class="hexagram hide-display"></div>
 			</div>
-        	<p>Click below to consult the Oracle.</p>
-			<div class="cast"></div>
-			<div id='reset'>reset</div>
+			<div id="cast">Click to consult the Oracle.</div>
+			<div id="result"></div>
+			<div id="instructions" class="hide-display">Click on a hex to view.</div>
+			<div id="reset" class="hide-display">Reset</div>
 		</div>
 		<!-- yin yang symbol made by darthkitty http://jsfiddle.net/DarthKitty/bP5hr/ -->
 		<!-- <div id="yinYang"><div><div></div><div><div></div></div><div><div></div></div></div> -->

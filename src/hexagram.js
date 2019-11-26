@@ -57,6 +57,10 @@ function Hex(hexLines = []) {
 		}
 	}
 
+	const getLink = (hexNumber) => {
+		return 'http://www.jamesdekorne.com/GBCh/hex' + hexNumber + '.htm'
+	}
+
 
 const HEXAGRAMS = {
 	1: '777777', 
@@ -130,7 +134,8 @@ const HEXAGRAMS = {
 		isComplete,
 		primary,
 		secondary,
-		lookup
+		lookup,
+		getLink
 	}
 }
 
