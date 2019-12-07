@@ -22,7 +22,6 @@ export function update(arr) {
 
 	cast.classList.add('hide-display')
 	reset.classList.remove('hide-display')
-	instructions.classList.remove('hide-display')
 	}
 }
 
@@ -58,7 +57,6 @@ window.addEventListener('load',
 			secondary.classList.add('hide-display')
 			reset.classList.add('hide-display')
 			cast.classList.remove('hide-display')
-			instructions.classList.add('hide-display')
 		}
 	}
 )

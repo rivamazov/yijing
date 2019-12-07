@@ -36,6 +36,7 @@ body {
 /* this fades in properly because there is no content in these elements
 on page load but there is probably a better way to do this. */
 .hexagram {
+	justify-content: flex-end;
 	width: 150px;
 	margin: 0 5 0 5;
 	opacity: 0;
@@ -46,7 +47,6 @@ on page load but there is probably a better way to do this. */
 }
 
 #cast {
-	padding-top: 16px;
 	text-align: center;
 	height: 100%;
 	width: 100%;
@@ -54,11 +54,16 @@ on page load but there is probably a better way to do this. */
 
 #result {
 	font-size: 2em;
+	padding-top: 24px;
+	height: 100%;
 }
 
 #reset {
-	margin-top:24px;
-	padding: 0 24 24 24px;
+	text-align: center;
+	margin-bottom: 50%;
+	padding: 5px;
+	border: 1px solid grey;
+	border-radius: 15%;
 }
 
 .yang {
