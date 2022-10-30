@@ -27,7 +27,7 @@
     "babel-loader": "^8.0.0-beta.6",
     "babel-plugin-add-module-exports": "^0.3.0-pre.1",
     "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "css-loader": "^3.2.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
